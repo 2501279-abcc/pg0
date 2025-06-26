@@ -1,0 +1,122 @@
+/* === 全体設定（変えずに） === */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+/* === ナビゲーションなどはそのまま === */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #ff4c4c;
+  text-decoration: underline;
+}
+
+/* === 見出しや段落も前のまま === */
+h1, h2, h3 {
+  margin: 20px 0;
+  color: #ff4c4c;
+  font-size: 2rem;
+}
+
+p {
+  max-width: 900px;
+  margin: 10px auto;
+  padding: 0 15px;
+  line-height: 1.8;
+  font-size: 1.3rem;
+}
+
+a {
+  color: #fff;
+  background-color: #c00;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 25px auto;
+  font-size: 1.3rem;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background-color: #a00;
+}
+
+/* === 画像スタイル === */
+
+/* homeページの画像：元の丸で180×180 */
+body.home img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff4c4c;
+  box-shadow: 0 0 12px rgba(255, 76, 76, 0.3);
+  margin: 30px auto 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* home以外の画像：大きめ四角形で300×300に拡大＋赤シャドウ強化 */
+body:not(.home) img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid #ff0000;
+  box-shadow: 0 0 20px 6px rgba(255, 0, 0, 0.8);
+  margin: 40px auto 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで少し拡大 */
+img:hover {
+  transform: scale(1.07);
+}
+
+/* 大きな写真用（必要あれば） */
+.big-photo {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  margin: 40px auto;
+  display: block;
+}
